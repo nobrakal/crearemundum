@@ -1,7 +1,6 @@
 \documentclass{book}
 \usepackage[utf8]{inputenc}
 \usepackage[francais]{babel}
-\usepackage[babel=true,kerning=true]{microtype}
 \usepackage[linkcolor=blue, colorlinks=true,]{hyperref}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
@@ -12,6 +11,10 @@
 \fancyfoot[LO]{\hyperlink {participation} {Envie de participer?}}
 \fancyfoot[RE]{\hyperlink {participation} {Envie de participer?}}
 
+\makeatletter
+\let\insertdate\@date
+\makeatother
+
 % Creare Mundum est sous licence CC-BY-SA, présente dans le dossier d'origine, merci de la respecter!
 %
 % Page mère regroupant les autres pour une meilleure coordination des participants (communiquez uniquement le fichier modifié)
@@ -19,6 +22,7 @@
 
 \title{Notes}
 \author{Milan de Garabe}
+\date{\oldstylenums{\insertdate}}
 \begin{document}
 \maketitle
 \setcounter{tocdepth}{2} %Génération du Sommaire.
