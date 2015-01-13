@@ -2,15 +2,14 @@
 
 FILE_bak=timeline.tex;
 FILE=post_timeline.tex;
-FILE_withouttex=post_timeline;
 
+cp $FILE_bak $FILE
 echo -e "\documentclass[a4paper, 11pt]{article}\n\usepackage[T1]{fontenc}\n\usepackage[utf8]{inputenc}\n\usepackage[francais]{babel}\n\usepackage[babel=true,kerning=true]{microtype}" > $FILE
 echo "\begin{document}" >> $FILE
 echo "$(cat $FILE_bak)" >> $FILE
 echo "\end{document}" >> $FILE
 latex $FILE
-dvips -R -E ${FILE%tex}dvi -o ${FILE%tex}eps
-convert -quality 100 -density 150 ps:${FILE%tex}eps ${FILE%tex}png
+dvips ${FILE%tex}dvi -o ${FILE%tex}eps
 
-cp $FILE_withouttex."png" "timeline.png"
-rm $FILE_withouttex.*
+cp ${FILE%tex}eps ${FILE_bak%tex}eps
+rm ${FILE%tex}*
