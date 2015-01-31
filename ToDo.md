@@ -6,4 +6,5 @@ Pour la version 0.4:
 - Developpement de l'Apocalypse
 - Correction orthographique
 - Timeline
+- Enfance d'Ermudor par Milan de Garabe
 - Thème ?
