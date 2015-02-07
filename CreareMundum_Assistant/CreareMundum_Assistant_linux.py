@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from random import *
+from random import random
 from gi.repository import Gtk, Pango
 
 class SearchDialog(Gtk.Dialog):
@@ -21,7 +21,7 @@ class SearchDialog(Gtk.Dialog):
 class MyWindow(Gtk.Window):
 
 	def __init__(self):
-		Gtk.Window.__init__(self, title="CreareMundum Assisant")
+		Gtk.Window.__init__(self, title="CreareMundum Assistant")
 		self.set_border_width(15)
 		
 		self.grid = Gtk.Grid(column_spacing=8)
