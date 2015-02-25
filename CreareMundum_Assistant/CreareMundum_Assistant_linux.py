@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from random import random
+from random import *
 from gi.repository import Gtk, Pango
 
 class SearchDialog(Gtk.Dialog):
