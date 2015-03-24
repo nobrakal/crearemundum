@@ -3,6 +3,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
 \usepackage[linkcolor=blue, colorlinks=true,]{hyperref}
+\usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -11,6 +12,7 @@
 \fancyhead[R]{}
 \fancyfoot[LO]{\hyperlink {participation} {Envie de participer?}}
 \fancyfoot[RE]{\hyperlink {participation} {Envie de participer?}}
+\newcommand{\cadre}[1]{\newline\newline\colorbox{lightgray}{\begin{minipage}{\linewidth}#1\end{minipage}}}
 
 \makeatletter
 \let\insertdate\@date
