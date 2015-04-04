@@ -1,0 +1,71 @@
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage[linkcolor=blue, colorlinks=true,]{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[C]{\rightmark}
+\fancyhead[L]{}
+\fancyhead[R]{}
+\fancyfoot[LO]{\hyperlink {participation} {Envie de participer?}}
+\fancyfoot[RE]{\hyperlink {participation} {Envie de participer?}}
+\newcommand{\cadre}[1]{\newline\newline\colorbox{lightgray}{\begin{minipage}{\linewidth}#1\end{minipage}}}
+
+\makeatletter
+\let\insertdate\@date
+\makeatother
+
+% Creare Mundum est sous licence CC-BY-SA, présente dans le dossier d'origine, merci de la respecter!
+%
+% Page mère regroupant les autres pour une meilleure coordination des participants (communiquez uniquement le fichier modifié)
+% Pour tout nouveau participant, il est conseillé d'aller voir le tutoriel sur le LaTex du site du zero.
+
+\title{Creare Mundum \\ L'Ère raciale \\ Devel}
+\author{The Creare Mundum Project}
+\date{\oldstylenums{\insertdate}}
+\begin{document}
+\maketitle
+\setcounter{tocdepth}{2} %Génération du Sommaire.
+\renewcommand{\contentsname}{Sommaire} 
+\tableofcontents
+
+\part{L'ère raciale}
+\chapter{Géographie de l'ère Raciale}
+\input{./src/racial/geographie}
+\chapter{Histoire de l'ère Raciale, ou la chute des grands empires}
+\input{./src/racial/histoire}
+\chapter{Races originelles}
+\input{./src/racial/races}
+
+\newpage
+\section{Participation au projet}
+\subsection{Comment?}
+\hypertarget{participation}{}
+Creare Mundum vous a plu? 
+Envie de partager vos scénarios, vos suggestions ou vos idées?
+\newline
+Contactez-nous sur la mailing list: \href {mailto:crearemundum@lists.tuxfamily.org}{crearemundum@lists.tuxfamily.org}
+\newline
+Ou rendez vous sur notre site: \href {http://creare-mundum.tuxfamily.org/} {http://creare-mundum.tuxfamily.org/}
+\subsection{Les créateurs}
+Voici la liste de ceux qui ont participé au projet Creare Mundum. Leur aide fut, est et sera toujours très précieuse au projet. Merci encore!  
+\begin{itemize}
+\item Alexandre ’Nobrakal’ Moine 
+\item Philippe ’Tymophil’ Aubé 
+\item Eliott ’Sulf’ Filippi
+\item Émiland ’Derec’ Garrabé
+\item Luc H.
+\end{itemize}
+\subsection{Remerciements}
+Voilà maintenant la liste de ceux qui ont contribué à plus petite mesure, et souvent sans le savoir. 
+\begin{itemize}
+\item Dan Scott, pour l’image d’arodef.
+\item Les artistes du MMORPG Ryzom, pour l'habitation de Thorneye ainsi que la dague d'Aegnord (modifiée). 
+\end{itemize}
+\subsection{Licence}
+Creare Mundum est un projet libre de droit, publié sous la licence Creative Commons BY-SA. C'est à dire que quiconque a la possibilité d'utiliser ce document (ainsi que toute les autres parties du projet), de le redistribuer et de le modifier. La seule obligation est de redistribuer le contenu (modifié ou non) sous les mêmes conditions.
+\end{document}
+
