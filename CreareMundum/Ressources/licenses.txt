@@ -1,3 +1,6 @@
-tecnho/engrenages.jpg: CC0 - Joe deSousa
-medieval/roue.jpg: CC-BY - Richard Walker (modified)
-racial/os.jpg: CC-BY Terje Asphaug
+tecnho/engrenages.jpg: CC0 - Joe deSousa https://www.flickr.com/photos/mustangjoe/20437315996/
+medieval/roue.jpg: CC-BY - Richard Walker (modified) https://www.flickr.com/photos/richardwalkerphotography/12496110795
+racial/os.jpg: CC-BY Terje Asphaug https://www.flickr.com/photos/33010465@N04/3079913809/
+post-apoca/post-apoca.jpg: CC-BY Kyhiro https://www.flickr.com/photos/kyhiro/19854005663/
+apoca/soldats.jpg: CC-BY soldiersmediacenter https://www.flickr.com/photos/soldiersmediacenter/2347103335/
+biblio.jpg: CC-BY Barta IV https://www.flickr.com/photos/98640399@N08/10030588973/
