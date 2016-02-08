@@ -16,6 +16,23 @@
 
 \makeatletter
 \let\insertdate\@date
+
+% define a user command to choose the image
+% this command also creates an internal command to insert the image
+\newcommand{\partimage}[2][]{\gdef\@partimage{\includegraphics[#1]{#2}}}
+% redefine the amsbook part code to include the \@partimage insertion command
+\def\@part[#1]#2{%
+  \ifnum \c@secnumdepth >-2\relax \refstepcounter{part}%
+    \addcontentsline{toc}{part}{\partname\ \thepart.
+        \protect\enspace\protect\noindent#1}%
+  \else
+    \addcontentsline{toc}{part}{#1}\fi
+  \begingroup\centering
+  \ifnum \c@secnumdepth >-2\relax
+       {\fontsize{\@xviipt}{22}\bfseries
+         \partname\ \thepart} \vskip 20\p@ \fi
+  \fontsize{\@xxpt}{25}\bfseries
+      #1\vfil\@partimage\vfil\endgroup \newpage\thispagestyle{empty}}
 \makeatother
 
 % Creare Mundum est sous licence CC-BY-SA, présente dans le dossier d'origine, merci de la respecter!
@@ -33,6 +50,7 @@
 \tableofcontents
 
 %%%%%%%%%
+\partimage[scale=0.4]{./Ressources/racial/os.jpg}
 \part{L'ère raciale}
 \chapter{Géographie de l'ère Raciale}
 \section{Introduction}
@@ -44,6 +62,7 @@ Vers l'an 0. L'apogée des civilisations naines et elfiques. En dehors de ces mo
 \chapter{Races originelles}
 \input{./src/racial/races}
 
+\partimage[scale=0.2]{./Ressources/medieval/roue.jpg}
 \part{L'ère médiévale}
 \begin{figure}
 \begin{center}
@@ -75,6 +94,7 @@ La magie est présente et beaucoup utilisée.
 \input{./src/medieval/ressources_medieval}
 
 %%%%%%%%%
+\partimage[scale=0.2]{./Ressources/techno/engrenages.jpg}
 \part{L'ère technologique}
 \chapter{Histoire et Géographie technologique}
 \section{Introduction}
@@ -82,6 +102,7 @@ An 2500. Les différents peuples sont arrivés à l'apogée de leurs savoirs-fai
 \input{./src/techno/geographie}
 
 %%%%%%%%%
+\partimage[scale=0.25]{./Ressources/apoca/soldats.jpg}
 \part{L'Apocalypse}
 \chapter{Now !}
 \section{Introduction}
@@ -89,6 +110,7 @@ An 2863. Le monde s'enflamme. Les peuples combattent. Les pleurs et le sang remp
 \input{./src/apoca/apocalypse}
 
 %%%%%%%%%
+\partimage[scale=0.2]{./Ressources/post-apoca/post-apoca.jpg}
 \part{L'ère post-apocalyptique}
 \chapter{Histoire et Géographie post-apocalyptique}
 \section{Introduction}
@@ -105,6 +127,7 @@ La magie a disparu depuis des lustres, mais quelques signaux anormaux commencent
 \input{./src/posta/ressources_posta}
 
 %%%%%%%%%
+\partimage[scale=0.85]{./Ressources/biblio.jpg}
 \part{Ressources générales}
 \chapter*{Ressources générales}
 \section{Chronologie}
@@ -117,9 +140,9 @@ La magie a disparu depuis des lustres, mais quelques signaux anormaux commencent
 Creare Mundum vous a plu? 
 Envie de partager vos scénarios, vos suggestions ou vos idées?
 \newline
-Contactez-nous sur la mailing list: \href {mailto:crearemundum@lists.tuxfamily.org}{crearemundum@lists.tuxfamily.org}
+Contactez-nous via l'interface github: \href {https://github.com/nobrakal/crearemundum} {https://github.com/nobrakal/crearemundum}
 \newline
-Ou rendez vous sur notre site: \href {http://creare-mundum.tuxfamily.org/} {http://creare-mundum.tuxfamily.org/}
+Ou rendez vous sur notre site: \href {https://nobrakal.github.io/crearemundum/} {https://nobrakal.github.io/crearemundum/}
 \subsection{Les créateurs}
 Voici la liste de ceux qui ont participé au projet Creare Mundum. Leur aide fut, est et sera toujours très précieuse au projet. Merci encore!  
 \begin{itemize}
